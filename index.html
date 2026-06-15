@@ -70,9 +70,9 @@
 <!-- 3 — OUR STANCE -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 3: Whether you use AI is your call" data-slide="framing" tabindex="-1">
   <span class="kicker">Before we start</span>
-  <p class="pull">We use these tools. We&rsquo;ll still make <span class="hl">the case against them</span> first.</p>
-  <p class="lead" style="margin-top: 0.8em;">We build and use AI ourselves, so we have a stake in it. That&rsquo;s exactly why we&rsquo;ll put the hardest worries on the table before we tell you where we think it earns its place.</p>
-  <p class="lead" style="margin-top: 0.6em;">Whether you use it in your own teaching is your decision, either way. The Graduate Center&rsquo;s draft guidance leaves that call to you.</p>
+  <p class="pull">Whether you use AI is <span class="hl">up to you</span></p>
+  <p class="lead" style="margin-top: 0.8em;">We build and use these tools ourselves, so we have a stake in them. Even so, what you do in your own teaching is your decision, whether that means using AI or leaving it out.</p>
+  <p class="lead" style="margin-top: 0.6em;">The Graduate Center&rsquo;s draft guidance leaves the decision to you, either way.</p>
 </div>
 
 <!-- ============ PART I — WHAT AI IS ============ -->
@@ -123,13 +123,14 @@
   <div class="content">
     <span class="kicker">How it&rsquo;s made</span>
     <h2>Where that ability comes from</h2>
-    <p style="margin-bottom: 0.7em;">It learns to guess the next piece by reading an enormous amount of text and adjusting itself, over and over, to guess a little better.</p>
-    <p style="margin-bottom: 0.7em;">That text is scraped at scale from the open web, digitized books, and public code &mdash; very likely including open materials like the ones you make. Afterward, people tune it with feedback on which answers are better.</p>
-    <div class="tip-box" style="margin-top: 0.4em;"><p>So the question of <strong>where that text came from, and who agreed to it,</strong> is built into the model itself. We come back to it in the worries.</p></div>
+    <p style="margin-bottom: 0.7em;">It learns to guess the next piece by reading an enormous amount of text and adjusting itself, over and over, to guess a little better. Afterward, people tune it with feedback on which answers are better.</p>
+    <p style="margin-bottom: 0.7em;">One openly documented example is <strong>The Pile</strong>, built by EleutherAI: 825&nbsp;GB bundling arXiv papers, PubMed, Wikipedia, Stack Exchange, GitHub code &mdash; and &ldquo;Books3,&rdquo; some 196,000 books taken from a pirate site (pulled offline in 2023).</p>
+    <div class="tip-box" style="margin-top: 0.4em;"><p>It&rsquo;s a rare look at what usually stays hidden, and the provenance problem in miniature: <strong>the open, the scholarly, and the pirated, all mixed together.</strong> We come back to it in the worries.</p></div>
+    <p class="src">On the corpus: <a href="https://pile.eleuther.ai/" target="_blank" rel="noopener">Gao et al., &ldquo;The Pile,&rdquo; EleutherAI, 2020</a>; on the Books3 takedown, <a href="https://en.wikipedia.org/wiki/The_Pile_(dataset)" target="_blank" rel="noopener">Wikipedia, 2023</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
-      <div class="flow-node flow-student"><div class="flow-node-label">The open web &middot; books &middot; code</div><div class="flow-node-desc">Scraped at scale &mdash; often without asking</div></div>
+      <div class="flow-node flow-student"><div class="flow-node-label">A corpus like The Pile</div><div class="flow-node-desc">arXiv &middot; Wikipedia &middot; GitHub &middot; 196k pirated books</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
       <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Training</div><div class="flow-node-desc">Adjust itself to predict that text better</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
@@ -140,19 +141,8 @@
   </div>
 </div>
 
-<!-- 8 — WHAT IT'S NOT -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 8: What it is not" data-slide="what-its-not" tabindex="-1">
-  <span class="kicker">A common mix-up</span>
-  <h2>What it isn&rsquo;t</h2>
-  <div class="grid-3" style="max-width:900px; margin:0 auto;">
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a database</h4><p>There&rsquo;s no store of facts inside it to look up.</p></div>
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a mind</h4><p>It doesn&rsquo;t understand or intend anything.</p></div>
-    <div class="card card-cyan" style="text-align:center;"><h4>Not a search engine</h4><p>On its own it isn&rsquo;t checking the web, only generating what fits.</p></div>
-  </div>
-</div>
-
 <!-- 9 — PLAUSIBLE != TRUE -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 9: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 8: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
   <span class="kicker">A caution</span>
   <h2>Confidently wrong</h2>
   <p class="lead" style="margin-bottom: 0.8em;">Because it&rsquo;s built to produce what <em>sounds</em> right, it can sound completely sure and still be wrong.</p>
@@ -164,7 +154,7 @@
 </div>
 
 <!-- ============ PART II — WHAT IT CAN DO NOW ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 10: Part Two, What It Can Do Now" data-slide="div-2" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 9: Part Two, What It Can Do Now" data-slide="div-2" tabindex="-1">
   <span class="ghost" aria-hidden="true">II</span>
   <span class="section-label">Part II</span>
   <h2>What It Can Do Now</h2>
@@ -173,7 +163,7 @@
 </div>
 
 <!-- 11 — GUESSING -> GROUNDED + TOOLS (merged) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 11: From guessing to grounded" data-slide="grounded" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: From guessing to grounded" data-slide="grounded" tabindex="-1">
   <div class="content">
     <span class="kicker">The problem &amp; the fix</span>
     <h2>From a guess to a grounded answer</h2>
@@ -202,7 +192,7 @@
 </div>
 
 <!-- 12 — LOOPS (kept brief) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 12: Agentic means it loops" data-slide="loop" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 11: Agentic means it loops" data-slide="loop" tabindex="-1">
   <div class="content">
     <span class="kicker">Agentic</span>
     <h2>Working in a loop</h2>
@@ -215,31 +205,8 @@
   </div>
 </div>
 
-<!-- 13 — VIBE CODING + STAKES -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 13: You can build by describing" data-slide="vibing" tabindex="-1">
-  <div class="content">
-    <span class="kicker">Building by describing</span>
-    <h2>What that lets you build</h2>
-    <p style="margin-bottom: 0.7em;">Describe what you want in plain language and let the agent make the change. Here, &ldquo;change the site&rsquo;s font to Wingdings.&rdquo; You can make working things without writing every line.</p>
-    <p>When it does more on its own, you have to check more of what it produces &mdash; and you&rsquo;re responsible for the result.</p>
-  </div>
-  <div class="stage">
-    <div class="carousel cap-overlay" data-interval="9000">
-      <div class="carousel-item active">
-        <img src="images/steve-vibe-wingdings-cli.png" alt="A terminal agent reading the site's CSS and changing the body font on request.">
-        <div class="carousel-caption"><strong>The instruction</strong><br>Plain English, and the agent edits the file.</div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/steve-vibe-wingdings-site.png" alt="The resulting website rendered entirely in Wingdings symbols instead of readable text.">
-        <div class="carousel-caption"><strong>The result</strong><br>Exactly what was asked. You have to check it.</div>
-      </div>
-      <div class="carousel-dots"></div>
-    </div>
-  </div>
-</div>
-
 <!-- ============ PART III — THE COMMON WORRIES ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 14: Part Three, The Common Worries" data-slide="div-3" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 12: Part Three, The Common Worries" data-slide="div-3" tabindex="-1">
   <span class="ghost" aria-hidden="true">III</span>
   <span class="section-label">Part III</span>
   <h2>The Common Worries</h2>
@@ -248,7 +215,7 @@
 </div>
 
 <!-- 15 — THE OPEN TENSION, build 1 of 2: the diagnosis -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 15: What happens to open" data-slide="worry-open" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 13: What happens to open" data-slide="worry-open" tabindex="-1">
   <div class="content">
     <span class="kicker">The worry that&rsquo;s ours</span>
     <h2>What happens to &ldquo;open&rdquo;</h2>
@@ -269,7 +236,7 @@
 </div>
 
 <!-- 16 — THE OPEN TENSION, build 2 of 2: no individual exit -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 14: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
   <span class="kicker">Where that leaves you</span>
   <h2>You can&rsquo;t license your way out</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.7em;">The instinct is to add a no-AI or non-commercial clause. Creative Commons &mdash; the steward of these licenses &mdash; says that doesn&rsquo;t work, and backfires.</p>
@@ -282,7 +249,7 @@
 </div>
 
 <!-- WEIGHTS — open vs closed weights, for OER -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: Open vs closed weights" data-slide="worry-weights" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: Open vs closed weights" data-slide="worry-weights" tabindex="-1">
   <span class="kicker">A common worry &middot; close to home</span>
   <h2>Open vs closed weights</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -293,7 +260,7 @@
 </div>
 
 <!-- BIAS -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 18: Bias" data-slide="worry-bias" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: Bias" data-slide="worry-bias" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Bias</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -304,7 +271,7 @@
 </div>
 
 <!-- 17 — LABOR -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 19: The people who build it" data-slide="worry-data-labor" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: The people who build it" data-slide="worry-data-labor" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>The people who build it</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -315,7 +282,7 @@
 </div>
 
 <!-- 20 — SLOP (open question, closes the worries) -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Hollow text" data-slide="worry-slop" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 18: Hollow text" data-slide="worry-slop" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Hollow text</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -325,7 +292,7 @@
 </div>
 
 <!-- ============ PART IV — YOUR OER WORK ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 21: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 19: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
   <span class="ghost" aria-hidden="true">IV</span>
   <span class="section-label">Part IV</span>
   <h2>Your OER Work</h2>
@@ -334,7 +301,7 @@
 </div>
 
 <!-- 23 — WHERE AI HELPS OER -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 22: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 20: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
   <span class="kicker">Making OER</span>
   <h2>Where it helps with OER work</h2>
   <p class="lead center-narrow">For making and adapting open materials, a few uses are worth it, as long as a person owns the result.</p>
@@ -346,7 +313,7 @@
 </div>
 
 <!-- 24 — JUDGING APPROPRIATE USE -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 23: Judging appropriate use" data-slide="judging" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 21: Judging appropriate use" data-slide="judging" tabindex="-1">
   <span class="kicker">What to ask</span>
   <h2>Judging appropriate use</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.8em;">A few questions to ask in every case:</p>
@@ -359,7 +326,7 @@
 </div>
 
 <!-- 25 — EXAMPLE: ThinkWith -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 24: An example, ThinkWith" data-slide="example" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 22: An example, ThinkWith" data-slide="example" tabindex="-1">
   <div class="content">
     <span class="kicker">An example</span>
     <h2>ThinkWith</h2>
@@ -380,7 +347,7 @@
 </div>
 
 <!-- 26 — REFUSAL AND ADOPTION -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 25: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 23: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
   <span class="kicker">Adopting or refusing</span>
   <h2>Informed refusal <em>and</em> informed adoption</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.8em;">Adopting and refusing are both legitimate. Whichever you choose, you should be able to say why.</p>
@@ -391,7 +358,7 @@
 </div>
 
 <!-- 27 — DISCUSSION -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 26: A few places to start" data-slide="discussion" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 24: A few places to start" data-slide="discussion" tabindex="-1">
   <span class="kicker">Over to you</span>
   <h2>A few places to start</h2>
   <div class="disc-grid">
@@ -404,7 +371,7 @@
 </div>
 
 <!-- 28 — SOURCES -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 27: Sources" data-slide="sources" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 25: Sources" data-slide="sources" tabindex="-1">
   <span class="kicker">Sources</span>
   <h2>References</h2>
   <ul class="src-list">
@@ -429,7 +396,7 @@
 <nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="27" aria-valuenow="1" aria-valuetext="Slide 1 of 27" tabindex="0">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="25" aria-valuenow="1" aria-valuetext="Slide 1 of 25" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
