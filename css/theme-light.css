@@ -1192,3 +1192,91 @@ a.offer:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 3
   .slide.active *,
   .title-slide .title-slide-content > * { animation: none !important; }
 }
+
+/* =====================================================================
+   MULTI-VIEWPORT RESPONSIVENESS  (appended last so it wins by order)
+   Goal: look good and feel full on every screen — phones, tablets
+   (both orientations), laptops, large monitors, and projectors.
+   ===================================================================== */
+
+/* Use the dynamic viewport height where supported so mobile browser
+   chrome doesn't clip the bottom of a slide. */
+@supports (height: 100dvh) {
+  html, body { height: 100dvh; }
+  #deck { height: 100dvh; }
+}
+
+/* ---------- SCALE UP on large displays (the "bigger" ask) ----------
+   Bumping the root font-size scales every rem-based size proportionally,
+   so type, padding, gaps and cards all grow together on big screens
+   instead of sitting as a small island in a sea of margin. */
+@media (min-width: 1280px) { html { font-size: 108%; } }
+@media (min-width: 1536px) { html { font-size: 118%; } }
+@media (min-width: 1920px) { html { font-size: 128%; } }
+@media (min-width: 2400px) { html { font-size: 142%; } }
+
+/* Let content containers breathe wider on large screens so the deck
+   fills the display rather than hugging the centre. */
+@media (min-width: 1536px) {
+  .offer-grid, .principle-grid, .axes, .people-row, .disc-grid, .model-grid { max-width: min(1400px, 84vw); }
+  .toc { max-width: min(1320px, 82vw); }
+  .logo-wall { max-width: min(720px, 46vw); }
+  .browser-frame { max-height: 80vh; }
+}
+
+/* ---------- TABLETS & PORTRAIT: stack split layouts ----------
+   Covers phones in any orientation (<=900) and portrait tablets up to
+   ~1100 wide (iPad / iPad Pro portrait), which the base 768 breakpoint
+   missed. Landscape tablets keep the side-by-side split. */
+@media (max-width: 900px), (orientation: portrait) and (max-width: 1180px) {
+  .layout-split { flex-direction: column; }
+  .layout-split > .content {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: flex-start;
+    padding: clamp(18px, 3.5vw, 34px) clamp(18px, 4vw, 40px);
+  }
+  .layout-split > .stage {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 40vh;
+    padding: clamp(14px, 3vw, 28px);
+  }
+  /* allow a dense stacked slide to scroll instead of clipping */
+  .slide.layout-split,
+  .slide.layout-content,
+  .slide.layout-full-dark,
+  .slide.layout-grid { overflow-y: auto; scrollbar-width: none; }
+  .slide.layout-split::-webkit-scrollbar,
+  .slide.layout-content::-webkit-scrollbar { display: none; }
+
+  /* collapse my custom component grids to two-up */
+  .offer-grid, .principle-grid, .people-row, .axes, .disc-grid, .model-grid { grid-template-columns: repeat(2, 1fr); }
+  .toc { grid-template-columns: 1fr; }
+  .browser-frame { max-height: 54vh; }
+  /* shrink the oversized divider numeral so it doesn't dominate */
+  .layout-divider .ghost { font-size: clamp(11rem, 52vw, 26rem); }
+  /* title hero motif can overflow on narrow screens */
+  .title-slide .title-slide-content::before { font-size: 30vh; right: 2%; }
+}
+
+/* ---------- PHONES: everything single column ---------- */
+@media (max-width: 560px) {
+  .offer-grid, .principle-grid, .people-row, .axes, .disc-grid, .model-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .comparison { grid-template-columns: 1fr; }
+  .logo-wall { grid-template-columns: 1fr 1fr; max-width: 360px; gap: 12px; }
+  .logo-cell { height: clamp(86px, 26vw, 120px); }
+  .pull { font-size: clamp(1.4rem, 8vw, 2.1rem); max-width: 100%; }
+  .axes, .disc-grid { margin-top: 1em; }
+  .title-slide .presenters { letter-spacing: 0.12em; }
+  .src-list { columns: 1 !important; }
+}
+
+/* ---------- SHORT LANDSCAPE (phone landscape, low projectors) ---------- */
+@media (max-height: 560px) and (orientation: landscape) {
+  .layout-divider .ghost { font-size: 72vh; }
+  .browser-frame { max-height: 78vh; }
+  .title-slide .title-logo { height: clamp(46px, 12vh, 80px); margin-bottom: clamp(10px, 2vh, 20px); }
+  .layout-split > .content { justify-content: center; }
+  .layout-content, .layout-full-dark { padding-top: clamp(14px, 3vh, 28px); padding-bottom: clamp(14px, 3vh, 28px); }
+}
