@@ -51,11 +51,11 @@
   </div>
 </div>
 
-<!-- 3 — OUR STANCE -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 2: Whether you use AI is your call" data-slide="framing" tabindex="-1">
+<!-- 2 — OER PROVENANCE -->
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 2: AI can obscure OER provenance" data-slide="framing" tabindex="-1">
   <p class="pull">What kind of world are we <span class="hl">building</span> as we use AI?</p>
-  <p class="lead" style="margin-top: 0.8em;">Langdon Winner asks us to look at technologies as forms of life, not just tools. AI is already part of teaching and learning, including for students, and the Graduate Center&rsquo;s official guidance leaves decisions about AI use to you. Before you use it in teaching or OER work, ask what AI changes in your classroom and in the knowledge commons in which you participate.</p>
-  <p class="src"><a href="https://press.uchicago.edu/ucp/books/book/chicago/W/bo49911830.html" target="_blank" rel="noopener">Langdon Winner, &ldquo;Technologies as Forms of Life,&rdquo; <em>The Whale and the Reactor</em>, 1986</a>.</p>
+  <p class="lead" style="margin-top: 0.8em;">For OER, that question starts with provenance. AI makes it easier to adapt and remix course materials, but it can also erase the trail of reuse and revision that open education depends on.</p>
+  <p class="src"><a href="https://opencontent.org/definition/" target="_blank" rel="noopener">David Wiley defines open content through the 5Rs</a>. <a href="https://creativecommons.org/2025/06/25/introducing-cc-signals-a-new-social-contract-for-the-age-of-ai/" target="_blank" rel="noopener">Creative Commons frames CC Signals</a> as an AI-era way to express reuse preferences for the commons.</p>
 </div>
 
 <!-- TOC (restored) -->
@@ -78,22 +78,20 @@
   <div class="divider-line"></div>
 </div>
 
-<!-- 6 — PREDICTS TEXT -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 5: Large language models predict tokens" data-slide="what-is-llm" tabindex="-1">
+<!-- 5 — GENERATES TEXT -->
+<div class="slide layout-split inference-slide" role="group" aria-roledescription="slide" aria-label="Slide 5: Inference generates one token at a time" data-slide="what-is-llm" tabindex="-1">
   <div class="content">
-    <h2>Large language models predict tokens</h2>
-    <p style="margin-bottom: 0.7em;">A large language model (LLM) generates an answer through <strong>inference</strong>. Inference builds the <strong>output</strong> one token at a time.</p>
-    <p>A <strong>token</strong> can be a word, part of a word, a number, or punctuation. The model reads the <strong>context</strong>, predicts the next token, adds it, and repeats.</p>
+    <h2>Inference generates one token at a time</h2>
+    <p style="margin-bottom: 0.7em;">The tokenizer turns the prompt into <strong>token IDs</strong>, which fill the start of the model&rsquo;s <strong>context window</strong>.</p>
+    <p>The model runs a <strong>forward pass</strong> and returns <strong>logits</strong>, the raw scores for possible next tokens. A decoding rule chooses one token, adds it to the context, and the process runs again.</p>
   </div>
-  <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
-    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:430px; margin:0 auto;">
-      <div class="flow-node flow-student"><div class="flow-node-label">Inference</div><div class="flow-node-desc">The LLM generates an answer</div></div>
-      <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Tokens</div><div class="flow-node-desc">Text becomes word pieces, numbers, or punctuation</div></div>
-      <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Context</div><div class="flow-node-desc">The prompt plus output generated so far</div></div>
-      <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Next-token prediction</div><div class="flow-node-desc">The model adds one token and repeats</div></div>
+  <div class="stage inference-stage" style="background: var(--bg-light);">
+    <div class="inference-flow">
+      <div class="flow-node flow-student"><div class="flow-node-label">1. Tokenize prompt</div><div class="flow-node-desc">Text becomes token IDs</div></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">2. Context window</div><div class="flow-node-desc">Prompt tokens plus generated tokens</div></div>
+      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">3. Forward pass</div><div class="flow-node-desc">Model scores possible next tokens</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">4. Logits</div><div class="flow-node-desc">Raw scores over the vocabulary</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">5. Decode token</div><div class="flow-node-desc">Choose one token, add it, repeat</div></div>
     </div>
   </div>
 </div>

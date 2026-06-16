@@ -697,6 +697,33 @@ body.overview-mode #deck { background: #E4DAC8; }
   font-size: clamp(15px, 1.25vw, 18px);
 }
 
+.layout-split.inference-slide > .stage.inference-stage {
+  padding: clamp(14px, 2.2vh, 28px) clamp(14px, 2vw, 28px) !important;
+}
+.inference-flow {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vh, 16px) !important;
+  width: 100%;
+  max-width: min(96%, 620px) !important;
+  margin: 0 auto;
+}
+.inference-flow .flow-node {
+  min-width: 0;
+  padding: clamp(12px, 1.7vh, 18px) clamp(14px, 1.8vw, 22px);
+}
+.inference-flow .flow-node-label {
+  font-size: clamp(16px, 1.35vw, 21px) !important;
+  margin-bottom: 3px;
+}
+.inference-flow .flow-node-desc {
+  font-size: clamp(13px, 1.05vw, 16px) !important;
+  line-height: 1.3;
+}
+.inference-flow .flow-node:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
 .layout-split > .stage.training-flow-stage:has(.flow-node) {
   padding: clamp(14px, 2.2vh, 28px) clamp(14px, 2vw, 28px) !important;
 }
@@ -1265,6 +1292,8 @@ a.offer:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 3
 /* ---------- PHONES: everything single column ---------- */
 @media (max-width: 560px) {
   .offer-grid, .principle-grid, .people-row, .axes, .axes.four, .disc-grid, .model-grid { grid-template-columns: 1fr; }
+  .inference-flow { grid-template-columns: 1fr; }
+  .inference-flow .flow-node:nth-child(5) { grid-column: auto; }
   .grid-2, .grid-3, .comparison { grid-template-columns: 1fr; }
   .logo-wall { grid-template-columns: 1fr 1fr; max-width: 360px; gap: 12px; }
   .logo-cell { height: clamp(86px, 26vw, 120px); }
