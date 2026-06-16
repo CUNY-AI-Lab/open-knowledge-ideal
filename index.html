@@ -58,8 +58,20 @@
   <p class="src"><a href="https://press.uchicago.edu/ucp/books/book/chicago/W/bo49911830.html" target="_blank" rel="noopener">Langdon Winner, &ldquo;Technologies as Forms of Life,&rdquo; <em>The Whale and the Reactor</em>, 1986</a>.</p>
 </div>
 
+<!-- TOC (restored) -->
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 3: Where we're headed" data-slide="toc" tabindex="-1">
+  <h2 style="margin-bottom: 0.6em;">Where we&rsquo;re headed</h2>
+  <nav class="toc" aria-label="Table of contents">
+    <a class="toc-item" href="#4"><span class="toc-num">I</span><span class="toc-body"><h4>AI Basics</h4><p>How language models predict text, and how they&rsquo;re trained.</p></span></a>
+    <a class="toc-item" href="#8"><span class="toc-num">II</span><span class="toc-body"><h4>What It Can Do Now</h4><p>Grounding, tools, and working in a loop.</p></span></a>
+    <a class="toc-item" href="#12"><span class="toc-num">III</span><span class="toc-body"><h4>Problematics</h4><p>What AI extraction does to open knowledge.</p></span></a>
+    <a class="toc-item" href="#21"><span class="toc-num">IV</span><span class="toc-body"><h4>Your OER Work</h4><p>Where AI helps, how to judge it, and projects we built.</p></span></a>
+    <a class="toc-item" href="#28"><span class="toc-num">V</span><span class="toc-body"><h4>Discussion</h4><p>Questions to work through together.</p></span></a>
+  </nav>
+</div>
+
 <!-- ============ PART I — AI BASICS ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 3: Part One, AI Basics" data-slide="div-1" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 4: Part One, AI Basics" data-slide="div-1" tabindex="-1">
   <span class="ghost" aria-hidden="true">I</span>
   <span class="section-label">Part I</span>
   <h2>AI Basics</h2>
@@ -67,7 +79,7 @@
 </div>
 
 <!-- 6 — PREDICTS TEXT -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: Large language models predict tokens" data-slide="what-is-llm" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 5: Large language models predict tokens" data-slide="what-is-llm" tabindex="-1">
   <div class="content">
     <h2>Large language models predict tokens</h2>
     <p style="margin-bottom: 0.7em;">A large language model (LLM) generates an answer through <strong>inference</strong>. Inference builds the <strong>output</strong> one token at a time.</p>
@@ -87,7 +99,7 @@
 </div>
 
 <!-- 8 — HOW IT'S TRAINED -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 5: How large language models are trained" data-slide="how-trained" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 6: How large language models are trained" data-slide="how-trained" tabindex="-1">
   <div class="content">
     <h2>How large language models are trained</h2>
     <p style="margin-bottom: 0.7em;">Training repeats one task at huge scale. The model guesses a hidden next token, checks the guess, and shifts its weights.</p>
@@ -108,7 +120,7 @@
 </div>
 
 <!-- 8 — THE PILE (concrete training corpus) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 6: Unpacking The Pile" data-slide="the-pile" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: Unpacking The Pile" data-slide="the-pile" tabindex="-1">
   <div class="content">
     <h2>Unpacking The Pile</h2>
     <p style="margin-bottom: 0.7em;">Many commercial AI companies hide or obfuscate their training data. EleutherAI documented <strong>The Pile</strong>, an 825&nbsp;GiB English corpus assembled in 2020.</p>
@@ -137,7 +149,7 @@
 </div>
 
 <!-- ============ PART II — WHAT IT CAN DO NOW ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 7: Part Two, What It Can Do Now" data-slide="div-2" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 8: Part Two, What It Can Do Now" data-slide="div-2" tabindex="-1">
   <span class="ghost" aria-hidden="true">II</span>
   <span class="section-label">Part II</span>
   <h2>What It Can Do Now</h2>
@@ -145,7 +157,7 @@
 </div>
 
 <!-- CONFIDENTLY WRONG — the flaw, right before its fix -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 8: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 9: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
   <h2>Rewarded for guessing</h2>
   <p class="lead" style="margin-bottom: 0.8em;">Kalai et al. argue that hallucinations persist because training and evaluation reward guessing over acknowledging uncertainty.</p>
   <div class="grid-2">
@@ -156,7 +168,7 @@
 </div>
 
 <!-- 11 — GUESSING -> GROUNDED + TOOLS (merged) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 9: From guessing to grounded" data-slide="grounded" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: From guessing to grounded" data-slide="grounded" tabindex="-1">
   <div class="content">
     <h2>Grounding the answer</h2>
     <p style="margin-bottom: 0.6em;">Prompt a frontier model for today&rsquo;s weather. A grounded system searches a live source before answering.</p>
@@ -184,7 +196,7 @@
 </div>
 
 <!-- 12 — LOOPS (kept brief) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: Agentic means it loops" data-slide="loop" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 11: Agentic means it loops" data-slide="loop" tabindex="-1">
   <div class="content">
     <h2>Working in a loop</h2>
     <p><strong>Agentic</strong> systems revise each tool call from the last result. Test-time computing gives the loop more passes; OpenClaw and Hermes agents run the loop.</p>
@@ -200,7 +212,7 @@
 </div>
 
 <!-- ============ PART III — THE COMMON WORRIES ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 11: Part Three, Problematics" data-slide="div-3" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 12: Part Three, Problematics" data-slide="div-3" tabindex="-1">
   <span class="ghost" aria-hidden="true">III</span>
   <span class="section-label">Part III</span>
   <h2>Problematics</h2>
@@ -208,7 +220,7 @@
 </div>
 
 <!-- 15 — THE OPEN TENSION, build 1 of 2: the diagnosis -->
-<div class="slide layout-split open-flow-slide" role="group" aria-roledescription="slide" aria-label="Slide 12: What happens to open" data-slide="worry-open" tabindex="-1">
+<div class="slide layout-split open-flow-slide" role="group" aria-roledescription="slide" aria-label="Slide 13: What happens to open" data-slide="worry-open" tabindex="-1">
   <div class="content">
     <h2>What happens to &ldquo;open&rdquo;</h2>
     <p style="margin-bottom: 0.6em;">When you license work openly, anyone may reuse it, so long as they credit you and give back to the commons. <strong>Model builders train on the work without crediting it or giving anything back.</strong></p>
@@ -227,7 +239,7 @@
 </div>
 
 <!-- WORRY — chatbots take the audience -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 13: Chatbots take the audience" data-slide="worry-audience" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 14: Chatbots take the audience" data-slide="worry-audience" tabindex="-1">
   <h2>Chatbots take the audience</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">When a chatbot answers the question, people stop clicking through to the source.</p>
   <p class="center-narrow">On a volunteer-run commons, the readers are also the people who maintain it. Referral traffic to open sites has fallen hard this year, and Wikipedia&rsquo;s human visits are sliding even as the bots scraping it climb.</p>
@@ -235,7 +247,7 @@
 </div>
 
 <!-- WORRY — publishers sold your scholarship -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 14: Academic publishers are selling scholarly writing to AI companies" data-slide="worry-publishers" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 15: Academic publishers are selling scholarly writing to AI companies" data-slide="worry-publishers" tabindex="-1">
   <h2>Academic publishers are selling scholarly writing to AI companies.</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">In the reported deals, authors were not asked or paid.</p>
   <p class="center-narrow">Taylor &amp; Francis took $10 million from Microsoft, and Wiley took $44 million. The Authors Guild says authors were not asked or paid. The writing sold was the closed, paywalled kind that authors sign over to publishers.</p>
@@ -243,14 +255,14 @@
 </div>
 
 <!-- 16 — THE OPEN TENSION, build 2 of 2: no individual exit -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: A license alone will not stop model training" data-slide="worry-no-exit" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: A license alone will not stop model training" data-slide="worry-no-exit" tabindex="-1">
   <h2>A license alone will not stop model training.</h2>
   <p class="center-narrow">In 2025 courts ruled that training can be fair use even on copyrighted work. Anthropic paid $1.5 billion for pirating the books, not for training on them. A restrictive license mostly affects people who want to reuse your work in ordinary ways. Collective responses, like CC&rsquo;s preference signals or Wikimedia charging scrapers for access, have more force.</p>
   <p class="src">CC licenses can&rsquo;t block training: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">CC legal primer, 2025</a>. The ruling: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic</a> + <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>. Collective responses: <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">CC, &ldquo;From Signals to Infrastructure,&rdquo; 2026</a>; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Wikimedia paid API, 2025</a>.</p>
 </div>
 
 <!-- WEIGHTS — open vs closed weights, for OER -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 16: When open knowledge becomes weights" data-slide="worry-weights" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 17: When open knowledge becomes weights" data-slide="worry-weights" tabindex="-1">
   <h2>When open knowledge becomes weights</h2>
   <p class="center-narrow">Wiley&rsquo;s 5Rs ask whether people can keep, revise, remix, reuse, and share a resource. When model builders turn that material into weights, the checks change.</p>
   <ul class="compact-bullets center-narrow">
@@ -263,7 +275,7 @@
 </div>
 
 <!-- THE OPEN ANSWER — public AI -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 17: The open answer, public AI" data-slide="public-ai" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 18: The open answer, public AI" data-slide="public-ai" tabindex="-1">
   <h2>Public AI</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.7em;">A closed model is owned and run by one company that decides who can use it and how. Open models can be run by anyone and are governed in public, and smaller ones already exist.</p>
   <div class="tip-box center-narrow"><p><strong>Our lab runs on models like these.</strong> It&rsquo;s a public service and stores none of your data.</p></div>
@@ -271,7 +283,7 @@
 </div>
 
 <!-- WHO WE ARE — the lab, as an instance of public AI -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 18: Who we are" data-slide="who" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 19: Who we are" data-slide="who" tabindex="-1">
   <div class="content">
     <h2>The CUNY AI Lab</h2>
     <p style="margin-bottom: 0.7em;">A faculty- and staff-led group at the Graduate Center. We build and run AI infrastructure for teaching and research across CUNY.</p>
@@ -288,7 +300,7 @@
 </div>
 
 <!-- 20 — WHAT WE OFFER (restored) -->
-<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 19: What CAIL Offers" data-slide="offerings" tabindex="-1">
+<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 20: What CAIL Offers" data-slide="offerings" tabindex="-1">
   <h2>What CAIL Offers</h2>
   <div class="offer-grid centered">
     <a class="offer" href="https://chat.ailab.gc.cuny.edu" target="_blank" rel="noopener"><h4>The Sandbox</h4><p>A private chat interface running open models, with zero data retention.</p></a>
@@ -301,7 +313,7 @@
 </div>
 
 <!-- ============ PART IV — YOUR OER WORK ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 20: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 21: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
   <span class="ghost" aria-hidden="true">IV</span>
   <span class="section-label">Part IV</span>
   <h2>Your OER Work</h2>
@@ -309,47 +321,58 @@
 </div>
 
 <!-- 23 — WHERE AI HELPS OER -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 21: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 22: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
   <h2>Where it helps with OER work</h2>
-  <p class="lead center-narrow">For making and adapting open materials, a few uses are worth it, as long as a person owns the result.</p>
+  <p class="lead center-narrow">Most of what AI gets sold for, open materials don&rsquo;t need. A few jobs are worth handing off anyway: the slow, repetitive ones, where you still read every result before it goes out.</p>
   <div class="axes" style="margin-top: 1.2em;">
-    <div class="axis"><span class="ax-num">&#9855;</span><h4>Accessibility</h4><p>Draft alt text and captions, then check them. It can speed up a tedious obligation.</p></div>
-    <div class="axis"><span class="ax-num">&#128196;</span><h4>Digitization</h4><p>Turn scanned pages and old PDFs into editable, publishable text.</p></div>
-    <div class="axis"><span class="ax-num">&#9998;</span><h4>Drafting &amp; translation</h4><p>Rough drafts and translations you revise into shape.</p></div>
+    <div class="axis"><span class="ax-num">01</span><h4>Accessibility</h4><p>Alt text and captions are the first thing to go when a deadline hits. Draft them in a batch, then read each one. A tedious duty turns into a quick edit.</p></div>
+    <div class="axis"><span class="ax-num">02</span><h4>Digitization</h4><p>A scanned book or a locked PDF becomes text you can edit, search, and relicense. That&rsquo;s the difference between a file people can only look at and one they can actually reuse.</p></div>
+    <div class="axis"><span class="ax-num">03</span><h4>Drafting &amp; translation</h4><p>A rough draft or a first-pass translation you&rsquo;d never publish as-is. It clears the blank page. The judgment stays yours.</p></div>
   </div>
 </div>
 
 <!-- 24 — JUDGING APPROPRIATE USE -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 22: Judging appropriate use" data-slide="judging" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 23: Judging appropriate use" data-slide="judging" tabindex="-1">
   <h2>Judging appropriate use</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.8em;">A few questions to ask in every case:</p>
+  <p class="lead center-narrow" style="margin-bottom: 0.8em;">Before any of it counts as your work, four questions.</p>
   <div class="grid-2">
-    <div class="card card-navy"><h4>Accountable</h4><p style="font-size:1.05em;">A person stands behind the result, and it&rsquo;s theirs to license once they&rsquo;ve shaped it.</p></div>
-    <div class="card card-navy"><h4>Disclosed</h4><p style="font-size:1.05em;">Say where AI helped. The lab has a disclosure tool for it.</p></div>
-    <div class="card card-navy"><h4>Verified</h4><p style="font-size:1.05em;">Check what it produced against a reliable source before it ships.</p></div>
-    <div class="card card-navy"><h4>Grounded</h4><p style="font-size:1.05em;">Give it your own sources to work from.</p></div>
+    <div class="card card-navy"><h4>Who answers for it?</h4><p style="font-size:1.05em;">Someone has to put their name on the result and defend it. They shaped it, so it&rsquo;s theirs to license.</p></div>
+    <div class="card card-navy"><h4>Did you disclose it?</h4><p style="font-size:1.05em;">Name where AI helped, in plain sight, not buried in a footnote. Readers of open work are owed that much. The lab has a tool for it.</p></div>
+    <div class="card card-navy"><h4>Did you check it?</h4><p style="font-size:1.05em;">Models write fluent, confident, wrong sentences. Hold the output against a real source before a student ever sees it.</p></div>
+    <div class="card card-navy"><h4>What&rsquo;s it grounded in?</h4><p style="font-size:1.05em;">Give it your own sources to work from. A model improvising from memory is the thing to keep out of your citations.</p></div>
   </div>
 </div>
 
 <!-- FROM IDEA TO ARTIFACT — intro to the examples -->
-<div class="slide layout-content" style="justify-content:center;" role="group" aria-roledescription="slide" aria-label="Slide 23: From idea to artifact" data-slide="practice-intro" tabindex="-1">
+<div class="slide layout-content" style="justify-content:center;" role="group" aria-roledescription="slide" aria-label="Slide 24: From idea to artifact" data-slide="practice-intro" tabindex="-1">
   <h2>From idea to artifact</h2>
-  <p class="lead center-narrow">For OER, subject experts can now build the resource they imagine, often without writing every line themselves.</p>
+  <p class="lead center-narrow">For years the bottleneck was technical: if you couldn&rsquo;t code, you waited on someone who could. That&rsquo;s the part that changed. The person with the subject knowledge can now build the resource, not just describe it.</p>
   <div class="axes" style="margin-top:1.2em;">
-    <div class="axis"><span class="ax-num">&#128218;</span><h4>Digitize &amp; open</h4><p>Turn scanned archives and old PDFs into searchable, openly licensed resources.</p></div>
-    <div class="axis"><span class="ax-num">&#127918;</span><h4>Make it interactive</h4><p>Generate games and readers students want to use.</p></div>
-    <div class="axis"><span class="ax-num">&#129309;</span><h4>Democratize</h4><p>Lower the barrier so someone with no coding background can still build a working tool.</p></div>
+    <div class="axis"><span class="ax-num">01</span><h4>Digitize &amp; open</h4><p>Turn an out-of-print book or a scanned archive into an open, searchable edition people can reuse.</p></div>
+    <div class="axis"><span class="ax-num">02</span><h4>Make it interactive</h4><p>Build a game, a reader, or a practice tool a student will actually open, not one more static PDF.</p></div>
+    <div class="axis"><span class="ax-num">03</span><h4>Lower the bar</h4><p>No developer, no grant. Several of the tools coming up were built by people who don&rsquo;t write code.</p></div>
   </div>
 </div>
 
-<!-- ===== RESTORED TOOL EXAMPLES (from the lab version) — curate later ===== -->
+<!-- ===== CONSOLIDATED EXAMPLES ===== -->
 
-<!-- EXAMPLE — Manifold Companion -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 24: Manifold Companion" data-slide="proj-manifold-companion" tabindex="-1">
+<!-- EXAMPLE BUCKET 1 — AI alongside an existing platform (Manifold) -->
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 25: AI as a Manifold companion" data-slide="proj-manifold" tabindex="-1">
   <div class="content">
-    <h2>Manifold Companion</h2>
-    <p style="margin-bottom:0.6em;">A document-processing platform that turns scanned pages and PDFs into publication-ready texts for CUNY&rsquo;s Manifold instance.</p>
-    <p>AI does the first pass (OCR, structure), and <strong>humans review and export</strong>.</p>
+    <h2>As a Companion for Digital Publishing</h2>
+    <p class="lead" style="margin-bottom:0.7em;">AI can help digitize, style, and present texts that you author, edit, or translate.</p>
+    <div class="card card-cyan">
+      <h4>Manifold Companion</h4>
+      <p>A CAIL tool that turns photos, scans, and PDFs into styled text. AI helps with both OCR and structure, before you review and export directly to Manifold. Access available upon request.</p>
+    </div>
+    <div class="card card-navy">
+      <h4>Styling</h4>
+      <p>AI can help converting Word files into structured HTML and creating a stylesheet that you can apply across your texts. E.g., <a href="https://cuny.manifoldapp.org/projects/italian-american-studies-open-syllabus" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">Italian American Studies Open Syllabus</a>, <a href="https://cuny.manifoldapp.org/projects/singhiozzi-e-sogghigni-8eb48be2-0778-4a22-8d19-66c3e74cca2e" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">Singhiozzi e Sogghigni</a>.</p>
+    </div>
+        <div class="card card-navy">
+      <h4><a href="https://stefanomorello.com/lalli/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">Franco Lalli Digital Archive / <em>Il Venditore di Sogni</em></a></h4>
+      <p>It can also build a custom publishing container, when the existing solutions are not able to present content in the way you would like.</p>
+    </div>
   </div>
   <div class="stage stage-embed">
     <div class="carousel cap-overlay" data-interval="9000">
@@ -374,70 +397,23 @@
   </div>
 </div>
 
-<!-- EXAMPLE — Lalli -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 25: Lalli, Il Venditore di Sogni" data-slide="proj-lalli" tabindex="-1">
+<!-- EXAMPLE BUCKET 2 — custom-built / "vibe-coded" applications -->
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 26: Custom-built, vibe-coded applications" data-slide="proj-vibe" tabindex="-1">
   <div class="content">
-    <h2>Lalli &mdash; <em>Il Venditore di Sogni</em></h2>
-    <p style="margin-bottom:0.6em;">An OCR + translation pipeline that digitizes the manuscripts of Italian-American writer Franco Lalli, then publishes them as an open, searchable archive.</p>
-    <p>Anyone can browse the archive freely, original beside translation, with scholarly metadata.</p>
-  </div>
-  <div class="stage stage-embed">
-    <div class="browser-frame">
-      <div class="browser-bar">
-        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="browser-url" href="https://stefanomorello.com/lalli/" target="_blank" rel="noopener"><span class="lock" aria-hidden="true">&#128274;</span> stefanomorello.com/lalli/</a>
-        <a class="browser-open" href="https://stefanomorello.com/lalli/" target="_blank" rel="noopener">Open live &#8599;</a>
-      </div>
-      <div class="browser-body"><iframe data-src="https://stefanomorello.com/lalli/" title="Live preview of the Lalli digital archive" loading="lazy"></iframe></div>
+    <h2>Custom-built <span style="color: var(--text-muted); font-weight: 500;">(or &ldquo;vibe-coded&rdquo;)</span> Applications</h2>
+    <p class="lead" style="margin-bottom:0.7em;">Standalone open educational tools built mostly by describing them to AI (sometimes by people who don&rsquo;t typically write code).</p>
+    <div class="card card-cyan">
+      <h4><a href="https://reader.inference-arcade.com/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">Cloze Reader</a></h4>
+      <p>A reading tool developed by Zach Muhlbauer that turns passages from Project Gutenberg into fill-in-the-blank exercises.</p>
     </div>
-  </div>
-</div>
-
-<!-- EXAMPLE — Italian American Open Syllabus -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 26: Italian American Open Syllabus" data-slide="proj-iaos" tabindex="-1">
-  <div class="content">
-    <h2>Italian American Open Syllabus</h2>
-    <p style="margin-bottom:0.7em;">A curated, peer-reviewed collection of open essays and reading lists on Italian-American literature and culture, published openly on Manifold.</p>
-    <p>Where AI helped: I built a <strong>skill</strong> that converts contributions I receive in Word into clean, parsed HTML and attaches a stylesheet. AI mostly handled the <strong>CSS</strong>. The editing and scholarship were mine.</p>
-  </div>
-  <div class="stage stage-embed">
-    <div class="browser-frame">
-      <div class="browser-bar">
-        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="browser-url" href="https://cuny.manifoldapp.org/projects/italian-american-studies-open-syllabus" target="_blank" rel="noopener"><span class="lock" aria-hidden="true">&#128274;</span> cuny.manifoldapp.org/projects/italian-american-studies-open-syllabus</a>
-        <a class="browser-open" href="https://cuny.manifoldapp.org/projects/italian-american-studies-open-syllabus" target="_blank" rel="noopener">Open live &#8599;</a>
-      </div>
-      <div class="browser-body"><iframe data-src="https://cuny.manifoldapp.org/projects/italian-american-studies-open-syllabus" title="Live preview of the Italian American Open Syllabus on Manifold" loading="lazy"></iframe></div>
+    <div class="card card-navy">
+      <h4><a href="https://ailab.gc.cuny.edu/blog/thinkwith/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">ThinkWith</a></h4>
+      <p>CAIL Fellow Nicole Walker built this tool to give her composition students visual feedback on their writing.</p>
     </div>
-  </div>
-</div>
-
-<!-- EXAMPLE — Impariamo l'Italiano -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 27: Impariamo l'Italiano" data-slide="proj-impariamo" tabindex="-1">
-  <div class="content">
-    <h2>Impariamo l&rsquo;Italiano!</h2>
-    <p style="margin-bottom:0.6em;">Interactive Italian-learning games (Wordle, memory, a verb-tense wheel, crosswords), free and no login required.</p>
-    <p><strong>Bea has no coding skills.</strong> The whole site was built with AI assistance, by an author with no code writing real OER. (There&rsquo;s a Russian edition, too.)</p>
-    <p>Stefano made a multilingual version, <a href="https://stefanomorello.com/langames/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">LanGames</a>, that generates game content for ten languages.</p>
-  </div>
-  <div class="stage stage-embed">
-    <div class="browser-frame">
-      <div class="browser-bar">
-        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="browser-url" href="https://beatricecarnelutti.com/impariamo/" target="_blank" rel="noopener"><span class="lock" aria-hidden="true">&#128274;</span> beatricecarnelutti.com/impariamo/</a>
-        <a class="browser-open" href="https://beatricecarnelutti.com/russian/" target="_blank" rel="noopener">Russian &#8599;</a>
-      </div>
-      <div class="browser-body"><iframe data-src="https://beatricecarnelutti.com/impariamo/" title="Live preview of the Impariamo l'Italiano learning games" loading="lazy"></iframe></div>
+    <div class="card card-navy">
+      <h4><a href="https://beatricecarnelutti.com/impariamo/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">Impariamo l&rsquo;Italiano</a></h4>
+      <p>A suite of interactive learning games to learn Italian (and <a href="https://stefanomorello.com/langames/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">expanded to other languages</a>) built by Beatrice Carnelutti.</p>
     </div>
-  </div>
-</div>
-
-<!-- EXAMPLE — Cloze Reader -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 28: Cloze Reader" data-slide="proj-cloze" tabindex="-1">
-  <div class="content">
-    <h2>Cloze Reader</h2>
-    <p style="margin-bottom:0.6em;">A reading-practice tool that turns passages into cloze (fill-in-the-blank) exercises that scaffold close reading and vocabulary.</p>
-    <p>An OER built by one of today&rsquo;s presenters, small and free to use.</p>
   </div>
   <div class="stage stage-embed">
     <div class="browser-frame">
@@ -451,28 +427,8 @@
   </div>
 </div>
 
-<!-- 25 — EXAMPLE: ThinkWith -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 29: An example, ThinkWith" data-slide="example" tabindex="-1">
-  <div class="content">
-    <h2>ThinkWith</h2>
-    <p style="margin-bottom: 0.6em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage and a cultural artifact, plus a paragraph connecting the two. The model gives feedback on how well the connection works.</p>
-    <p style="margin-bottom: 0.6em;"><strong>What worked:</strong> the AI never writes the paragraph for the student. It keeps sending them back to revise until the paragraph ties the source and the artifact together.</p>
-    <p><strong>Where it breaks:</strong> the judge is itself a model scoring a rubric, so the teacher still has to judge the result. And Walker said building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p>
-  </div>
-  <div class="stage stage-embed">
-    <div class="browser-frame">
-      <div class="browser-bar">
-        <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-        <a class="browser-url" href="https://ailab.gc.cuny.edu/blog/thinkwith/" target="_blank" rel="noopener"><span class="lock" aria-hidden="true">&#128274;</span> ailab.gc.cuny.edu/blog/thinkwith</a>
-        <a class="browser-open" href="https://ailab.gc.cuny.edu/blog/thinkwith/" target="_blank" rel="noopener">Open live &#8599;</a>
-      </div>
-      <div class="browser-body"><iframe data-src="https://ailab.gc.cuny.edu/blog/thinkwith/" title="Live preview of the ThinkWith blog post" loading="lazy"></iframe></div>
-    </div>
-  </div>
-</div>
-
-<!-- 26 — REFUSAL AND ADOPTION -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 30: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
+<!-- REFUSAL AND ADOPTION -->
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 27: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
   <h2>Informed refusal <em>and</em> informed adoption</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.8em;">Adopting and refusing are both legitimate. Whichever you choose, you should be able to say why.</p>
   <div class="grid-2" style="max-width:820px; margin:0 auto;">
@@ -482,28 +438,24 @@
 </div>
 
 <!-- DISCUSSION — one question per slide -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 31: Question 1" data-slide="q1" tabindex="-1">
-  <p class="pull">Where in your teaching would a grounded, course-specific assistant help, and where would it get in the way?</p>
-</div>
-
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 32: Question 2" data-slide="q2" tabindex="-1">
-  <p class="pull">What would <span class="hl">informed refusal</span> look like in your field? What would you want to tell a student about it?</p>
-</div>
-
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 33: Question 3" data-slide="q3" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 28: Question 1" data-slide="q3" tabindex="-1">
   <p class="pull">If you released an OER, how would you want AI to be allowed to use it, or not?</p>
 </div>
 
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 34: Question 4" data-slide="q4" tabindex="-1">
-  <p class="pull">What&rsquo;s one resource you&rsquo;ve wanted to build but couldn&rsquo;t? Could anything here lower that barrier?</p>
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 29: Question 2" data-slide="q4" tabindex="-1">
+  <p class="pull">What would a selective, purpose-driven use of AI look like in your own OER work?</p>
 </div>
 
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 35: Question 5" data-slide="q5" tabindex="-1">
-  <p class="pull">Which of today&rsquo;s worries still feels unresolved to you?</p>
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 30: Question 3" data-slide="q2" tabindex="-1">
+  <p class="pull">What would <span class="hl">informed refusal</span> look like in the context of your syllabus/project?</p>
+</div>
+
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 31: Question 4" data-slide="q5" tabindex="-1">
+  <p class="pull">Which of today&rsquo;s problematics still feels unresolved to you?</p>
 </div>
 
 <!-- 28 — SOURCES -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 36: Sources" data-slide="sources" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 32: Sources" data-slide="sources" tabindex="-1">
   <h2>References</h2>
   <ul class="src-list">
     <li>Kalai et al. (OpenAI &amp; Georgia Tech), <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">&ldquo;Why Language Models Hallucinate,&rdquo;</a> 2025.</li>
@@ -531,7 +483,7 @@
 <nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="36" aria-valuenow="1" aria-valuetext="Slide 1 of 36" tabindex="0">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="32" aria-valuenow="1" aria-valuetext="Slide 1 of 32" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
